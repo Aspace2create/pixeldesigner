@@ -6,10 +6,6 @@ A pixel art tool that serves as a kit basher that allows plugins and loading you
 # PXL ToolKit Documentation
 
 
-## Documentation
-
-
-
 ## Creating An Effect
 
 ### Example: Vignette effect
