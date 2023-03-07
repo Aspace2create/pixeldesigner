@@ -19,7 +19,10 @@ all nineslice sprites have this, however they just might be the same
 ```
 Cmd/Ctrl + shift + R
 ```
-
+(Delete last clicked object)
+```
+Cmd/Ctrl + X
+```
 
 # PXL ToolKit Documentation
 
