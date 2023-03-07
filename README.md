@@ -7,6 +7,11 @@ A pixel art tool that serves as a kit basher that allows plugins and loading you
 
 https://user-images.githubusercontent.com/121524547/223549784-f7724f0b-6576-446e-ba0c-750fb9e5eea2.mov
 
+
+https://user-images.githubusercontent.com/121524547/223551020-35898882-b208-4a3f-a476-a4881f078a13.mov
+
+
+
 (Toggle Secondary Nineslice mode)
 all nineslice sprites have this, however they just might be the same
 ```
