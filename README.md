@@ -4,9 +4,13 @@ A pixel art tool that serves as a kit basher that allows plugins and loading you
 ## Commands
 ####
 
-```
+
+https://user-images.githubusercontent.com/121524547/223549784-f7724f0b-6576-446e-ba0c-750fb9e5eea2.mov
 
 ```
+Cmd/Ctrl + shift + R
+```
+
 
 # PXL ToolKit Documentation
 
