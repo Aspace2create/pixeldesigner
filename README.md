@@ -176,3 +176,10 @@ the next method is crucial it is on release, this is when any objects are added 
 follow the circle tool example for more information on that
 
 
+### old version screenshots and stuff vvvvv
+
+
+https://user-images.githubusercontent.com/121524547/223578116-82080312-74b0-45ae-9790-7421cb1ed369.mov
+
+
+
