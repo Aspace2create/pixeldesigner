@@ -16,5 +16,7 @@ as for code plugins, there are 3 types of plugins there are 3rd party recommende
 
 Documentation for plugin creation:
 https://github.com/Aspace2create/pixeldesigner/blob/main/README.md
+Link for consent form for uploading Image Contribution:
+https://forms.gle/VSXprkUqm24sAjdH9
 
 
