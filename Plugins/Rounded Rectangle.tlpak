@@ -1,0 +1,45 @@
+functList=["",""]
+functList.append("""
+resizeCommand='''
+try:
+    if self.raction:
+        self.reshape(imageCommands.create_RectRound(new_W,new_H,1,self.color).toqimage())
+        self.updateManipulator()
+    else:
+        im=Image.fromqimage(self.originalim)
+        imr=np.array(im)
+        imr=np.tile(imr,(10,10,1))
+        im=im.resize((new_W,new_H))
+        im.paste(Image.fromarray(imr),(0,0))
+        self.reshape(im.toqimage())
+        self.updateManipulator()
+except Exception as e:
+    print(e)
+    pass
+'''
+
+if self.curtool=="RRRectangleTool010":
+    try:
+        widthr,heightr=int(widthr),int(heightr)
+        if event.button() == Qt.LeftButton:
+            if self.rubberBand.default=="iregyx":
+                new=ShapeItm(qimage=create_RectRound(widthr,heightr,1,self.color).toqimage(), parent=self,pos=self.view.mapToScene(QPoint(enrd.x(),enrd.y())),resizedir=resizeCommand,color=self.color)
+            elif self.rubberBand.default=="iregxy":
+                new=ShapeItm(qimage= create_RectRound(widthr,heightr,1,self.color).toqimage(), parent=self,pos=self.view.mapToScene(QPoint(enrd.x(),self.originpoint.y())),resizedir=resizeCommand,color=self.color)
+            elif self.rubberBand.default=="ireg":
+                new=ShapeItm(qimage=create_RectRound(widthr,heightr,1,self.color).toqimage(), parent=self,pos=self.view.mapToScene(QPoint(self.originpoint.x(),self.originpoint.y())),resizedir=resizeCommand,color=self.color)
+            elif self.rubberBand.default=="reg":
+                new=ShapeItm(qimage=create_RectRound(widthr,heightr,1,self.color).toqimage(), parent=self,pos=self.view.mapToScene(QPoint(self.originpoint.x(),enrd.y())),resizedir=resizeCommand,color=self.color)
+            self.graphicsItems.append(new)
+            self.scene.addItem(self.graphicsItems[-1])
+            self.rubberBand.hide()
+    except Exception as e:
+        print(e)""")
+
+self.boxer.append("RRRectangleTool010")
+newQaction=ToolAction(QIcon(self.returnICO("rounded_corner")), "Rounded Rectangle Tool", parent=self,override=True,funclst=functList ,func="self.manipbox.hide()",name="RRRectangleTool010",source=("Default Tool","Version 0.0.1","Move Tool"))
+newQaction.setCheckable(True)
+self.DefaultTools.append(newQaction)
+self.toolbar.addAction(newQaction)
+self.toolbar.insertSeparator(newQaction)
+self.group.addAction(newQaction)
