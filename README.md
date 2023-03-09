@@ -187,5 +187,7 @@ follow the circle tool example for more information on that
 
 https://user-images.githubusercontent.com/121524547/223578116-82080312-74b0-45ae-9790-7421cb1ed369.mov
 
+the old version above relied on something i called ```pattern insert``` 
+in which it coppied a specified range of pixels and pastes it in a specified section of the image
 
 
