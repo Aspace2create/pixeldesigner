@@ -1,0 +1,46 @@
+functList=["",""]
+
+functList.append("""
+resizeCommand='''
+try:
+    if self.raction:
+        self.reshape(imageCommands.create_Circle(self.color,1,width=new_W,height=new_H).toqimage())
+        self.updateManipulator()
+    else:
+        im=Image.fromqimage(self.originalim)
+        imr=np.array(im)
+        imr=np.tile(imr,(10,10,1))
+        im=im.resize((new_W,new_H))
+        im.paste(Image.fromarray(imr),(0,0))
+        self.reshape(im.toqimage())
+        self.updateManipulator()
+except Exception as e:
+    print(e)
+    pass
+'''
+if self.curtool=="CircleTool010":
+    try:
+        if event.button() == Qt.LeftButton:
+            if self.rubberBand.default=="iregyx":
+                new=ShapeItm(qimage=(create_Circle(self.color,1,width=widthr,height=heightr).transpose(Image.FLIP_LEFT_RIGHT).transpose(Image.FLIP_TOP_BOTTOM)).toqimage(), parent=self,pos=self.view.mapToScene(QPoint(enrd.x(),enrd.y())),resizedir=resizeCommand,color=self.color)
+            elif self.rubberBand.default=="iregxy":
+                new=SimpleItm(qimage=create_Circle(self.color,1,width=widthr,height=heightr).transpose(Image.FLIP_LEFT_RIGHT).toqimage(), parent=self,pos=self.view.mapToScene(QPoint(enrd.x(),self.originpoint.y())),resizedir=resizeCommand,color=self.color)
+            elif self.rubberBand.default=="ireg":
+                new=ShapeItm(qimage=create_Circle(self.color,1,width=widthr,height=heightr).transpose(Image.FLIP_TOP_BOTTOM).transpose(Image.FLIP_LEFT_RIGHT).toqimage(), parent=self,pos=self.view.mapToScene(QPoint(self.originpoint.x(),self.originpoint.y())),resizedir=resizeCommand,color=self.color)
+            elif self.rubberBand.default=="reg":
+                new=ShapeItm(qimage=create_Circle(self.color,1,width=widthr,height=heightr).transpose(Image.FLIP_TOP_BOTTOM).toqimage(), parent=self,pos=self.view.mapToScene(QPoint(self.originpoint.x(),enrd.y())),resizedir=resizeCommand,color=self.color)
+            self.graphicsItems.append(new)
+            self.scene.addItem(self.graphicsItems[-1])
+            self.rubberBand.hide()
+    except Exception as e:
+        print(e)
+        self.rubberBand.hide()""")
+
+
+self.circr.append("CircleTool010")
+newQaction=ToolAction(QIcon(self.returnICO("circle")), "Circle Tool", parent=self,func="self.manipbox.hide()",override=True,funclst=functList ,name="CircleTool010",source=("Default Tool","Version 0.0.1","Move Tool"))
+newQaction.setCheckable(True)
+self.DefaultTools.append(newQaction)
+self.toolbar.addAction(newQaction)
+self.toolbar.insertSeparator(newQaction)
+self.group.addAction(newQaction)
