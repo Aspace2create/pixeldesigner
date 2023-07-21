@@ -22,11 +22,18 @@ all nineslice sprites have this, however they just might be the same
 ```
 Cmd/Ctrl + shift + R
 ```
-(Delete last clicked object)
+(Delete selected Objects)
 ```
 Cmd/Ctrl + X
 ```
-
+(Select all objects)
+```
+Cmd/Ctrl + A
+```
+(Skew right)
+```
+Cmd/Ctrl + E
+```
 # PXL ToolKit Documentation
 
 
